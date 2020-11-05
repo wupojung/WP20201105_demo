@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1591875643 source:c:\users\wupojung\desktop\demo\src\moto.cpp
+	"Moto.h"
+	<iostream>
+
+1591875362 c:\users\wupojung\desktop\demo\include\moto.h
+
+1591875296 source:c:\users\wupojung\desktop\demo\src\framer.cpp
+	"Framer.h"
+	"Moto.h"
+
+1591875266 c:\users\wupojung\desktop\demo\include\framer.h
+	"Moto.h"
+
+1591875479 source:c:\users\wupojung\desktop\demo\main.cpp
+	<iostream>
+	"Framer.h"
+	"Moto.h"
+
