@@ -12,6 +12,9 @@ namespace Demo
 {
     public partial class Form1 : Form
     {
+        //變數區
+        private CarApi api = null;
+
         public Form1()
         {
             InitializeComponent();
@@ -21,7 +24,7 @@ namespace Demo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            api = new CarApi();   //配置記憶體空間
         }
 
         private void Form1_Shown(object sender, EventArgs e)
@@ -39,7 +42,6 @@ namespace Demo
 
         #region Event
 
-
         /// <summary>
         /// 查詢按鈕按下時的動作
         /// </summary>
@@ -55,9 +57,14 @@ namespace Demo
             }
 
             // 送資料給API 
-
+            List<Image> imgList = api.GetPlate(tbPlate.Text);  //調用程式
 
             // 根據結果顯示圖片 
+            if (imgList != null && imgList.Count >= 4)
+            {
+                pic1.Image = imgList[0];
+                //TODO:把剩下三個全部補完
+            }
         }
 
 
