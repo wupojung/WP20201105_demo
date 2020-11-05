@@ -47,13 +47,22 @@ namespace Demo
         /// <param name="e"></param>
         private void btnGo_Click(object sender, EventArgs e)
         {
-            // 檢查是否輸入空白
+            // 檢查是否輸入空白         
+            if (string.IsNullOrWhiteSpace(tbPlate.Text))
+            {
+                MessageBox.Show("請輸入車牌", "警告");
+                return;
+            }
 
             // 送資料給API 
+
 
             // 根據結果顯示圖片 
         }
 
+
         #endregion
+
+
     }
 }
